@@ -31,4 +31,16 @@ public class LeapYear
         return output;
 
     }
+
+    public bool IsLeapYear2(int year)
+    {
+        if (DateTime.IsLeapYear(year))
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
+    }
 }
