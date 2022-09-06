@@ -6,11 +6,12 @@ public class LeapYearTest
     public void IsYearLeapTest()
     {
         //arrange
-        var leap = new LeapYear();
+        var leapYearInt1 = 1600;
+        var leapYearInt2 = 1900;
 
         //act
-        var result = leap.IsLeapYear(1600);
-        var result2 = leap.IsLeapYear(1900);
+        var result = HelloWorld.LeapYear.IsLeapYear(leapYearInt1);
+        var result2 = HelloWorld.LeapYear.IsLeapYear(leapYearInt2);
 
 
         //assert
@@ -24,11 +25,12 @@ public class LeapYearTest
     public void IsYearLeapTest2()
     {
         //arrange
-        var leap = new LeapYear();
+        var leapYearInt1 = 1600;
+        var leapYearInt2 = 1900;
 
         //act
-        var result = leap.IsLeapYear2(1600);
-        var result2 = leap.IsLeapYear2(1900);
+        var result = HelloWorld.LeapYear.IsLeapYear2(leapYearInt1);
+        var result2 = HelloWorld.LeapYear.IsLeapYear2(leapYearInt2);
 
 
         //assert
