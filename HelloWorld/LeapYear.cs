@@ -47,20 +47,24 @@ public class LeapYear
                 if (year % 400 == 0)
                 {
                     output = true;
+                    Console.WriteLine("yay");
                 }
                 else
                 {
                     output = false;
+                    Console.WriteLine("nay");
                 }
             }
             else
             {
                 output = true;
+                Console.WriteLine("yay");
             }
         }
         else
         {
             output = false;
+            Console.WriteLine("nay");
         }
         if (output)
         {
