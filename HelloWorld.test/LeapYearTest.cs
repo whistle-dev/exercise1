@@ -38,4 +38,22 @@ public class LeapYearTest
         result2.Should().Be(false);
 
     }
+
+    [Fact]
+    public void IsLeapYearExceptions()
+    {
+
+        //arrange
+        string formatException = "Hej";
+        var under1582Exception = 1400;
+
+        //act
+        Action act = () => HelloWorld.LeapYear.IsLeapYear(Int32.Parse(formatException));
+        Action act2 = () => HelloWorld.LeapYear.IsLeapYear(under1582Exception);
+
+
+        //assert
+        act.Should().Throw<FormatException>();
+        act2.Should().Throw<Exception>();
+    }
 }
