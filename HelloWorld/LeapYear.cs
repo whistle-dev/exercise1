@@ -4,14 +4,41 @@ public class LeapYear
 {
     public static void Main(String[] args)
     {
-        int intTemp = Convert.ToInt32(Console.ReadLine());
-        Console.WriteLine(IsLeapYear(intTemp));
+        try
+        {
+            Console.Write("Enter a year: ");
+            int intTemp = Convert.ToInt32(Console.ReadLine());
+            IsLeapYear(intTemp);
+
+        }
+        catch (System.FormatException)
+        {
+            Console.WriteLine("Only integers please!");
+        }
+
+
     }
 
 
     public static bool IsLeapYear(int year)
     {
+        try
+        {
+            if (year < 1582)
+            {
+                throw new Exception();
+            }
+        }
+        catch (System.Exception)
+        {
+            Console.WriteLine("Only works after year 1582");
+            return false;
+        }
+
+
         var output = false;
+        string yay = "yay";
+        string nay = "nay";
 
         if (year % 4 == 0)
         {
@@ -39,8 +66,16 @@ public class LeapYear
             output = false;
             Console.WriteLine("nay");
         }
-        return output;
-
+        if (output)
+        {
+            Console.WriteLine(yay);
+            return true;
+        }
+        else
+        {
+            Console.WriteLine(nay);
+            return false;
+        }
     }
 
     public static bool IsLeapYear2(int year)
